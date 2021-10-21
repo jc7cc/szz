@@ -1,0 +1,22 @@
+<footer>
+  <hr/>
+  <span>
+    Power by
+    <a href="https://gohugo.io">Hugo</a>
+    and
+    <a href="https://github.com/sunzhe96/szz">szz theme</a>.
+  </span>
+  <br/>
+  <span>
+    {{ $startYear :=  .Site.Params.startYear }}
+    {{ $currentYear := now.Year | string }}
+
+    {{ if eq $startYear $currentYear }}
+    © {{ $startYear }}
+    {{ else }}
+    © {{ $startYear }} - {{ $currentYear }}
+    {{ end }}
+    {{ .Site.Params.Author }} All rights reserved.
+  </span>
+
+</footer>

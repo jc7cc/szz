@@ -1,0 +1,46 @@
+{{ define "main" }}
+<main>
+  <ul>
+    {{ $list := .Site.RegularPages }}
+    {{ $len := len $list}}
+    <h1 class="index-title">Recent Posts</h1>
+    {{ range $index, $page := $list }}
+    <li>
+      <div>
+	<h2>
+	  <a class="title-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+	</h2>
+	<p class="description">{{ .Description }}</p>
+	<p class="date">{{ .Date | time.Format ":date_medium"}}</p>
+      </div>
+    </li>
+    {{ end }}
+  </ul>
+
+  <div>
+    <hr/>
+    <h1 class="index-title">Reviews</h1>
+    {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+      {{ if eq $taxonomyname "categories" }}
+        {{ range $key, $value := $taxonomy }}
+          {{ if eq $key "book-reviews" }}
+            {{ range $value.Pages }}
+    <div class="flex-review-container">
+      <div>
+	<h2>
+	  <a class="title-link" href="{{ .RelPermalink}}">{{ .Params.book }}</a>
+	</h2>
+	<p>By {{ .Params.bookauthor }}</p>
+      </div>
+      <img id="book" src="{{ .Params.cover }}"/>
+    </div>
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </div>  
+</main>
+
+
+{{ end }}

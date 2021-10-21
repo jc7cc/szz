@@ -1,0 +1,13 @@
+<head>
+  {{ $reset := resources.Get "css/reset.css" }}
+  {{ $utilities := resources.Get "css/utilities.css" }}
+  {{ $style := resources.Get "scss/style.scss" | toCSS }}
+
+  <link href="{{ $reset.RelPermalink }}" rel="stylesheet"/>
+  <link href="{{ $utilities.RelPermalink }}" rel="stylesheet"/>
+  <link href="{{ $style.RelPermalink }}" rel="stylesheet"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+

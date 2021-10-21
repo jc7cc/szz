@@ -1,0 +1,16 @@
+<header>
+  <h1 id="site-title">
+    <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+  </h1>
+  <nav>
+    <ul id="nav-container">
+	{{ range .Site.Menus.main }}
+      <li id="nav-item">
+	<a href="{{ .URL }}"> {{ .Name }}</a>
+	<div class="bot-border"></div>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+  <hr/>
+</header>

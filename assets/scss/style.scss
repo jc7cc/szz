@@ -1,0 +1,212 @@
+$bg-color: #212221;
+$bt-color: #C8C6C6;
+/* $link-color: #FFAA71; */
+$link-color: #7FCD91;
+$select-color: #01B0D3;
+$title-color: $link-color;
+$text-color: $bt-color;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC&family=Roboto&display=swap');
+
+::selection {
+  color: $bg-color;
+  background: $select-color;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+  font-family: 'Roboto', 'Noto Sans SC', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  background-color: $bg-color;
+  color: $text-color;
+  min-height: 100vh;
+}
+
+/* flex-utilities */
+.flex-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-item: stretch;
+}
+
+#flex-item-2 {
+    flex-grow: 1;
+}
+
+/* book review utilities (flex) */
+.flex-book-container {
+    margin: 1.5rem 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    h2 {
+	margin: 0;
+    }
+}
+
+#book {
+    max-width: 120px;
+}
+
+/* heading and title */
+h1, h2, h3, h4, h5, h6 {
+    color: $title-color;
+    font-weight: bold;
+    margin: 1.3rem 1rem;
+}
+
+h1 {
+    font-size: 1.65rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.17rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: 0.83rem;
+}
+
+h6 {
+    font-size: 0.75rem;
+}
+
+#site-title {
+    font-size: 1.9rem;
+    text-align: center;
+    a {
+	color: $text-color;
+	text-decoration: none;
+    }
+    a:hover {
+	text-decoration: underline $bt-color;
+	text-decoration-thickness: 0.2rem;
+    }
+}
+
+.title {
+    color: $title-color;
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+.index-title {
+    color: $text-color;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.index-title::before {
+    content: "# ";
+}
+
+/* link */
+a {
+    color: $link-color;
+}
+
+.title-link {
+    line-height: 2rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+p {
+  margin: 0 1rem;
+  text-align: justify;
+}
+
+pre {
+    margin: 1rem 1.5rem;
+    padding: 0.5rem;
+    border: 0.5px solid $bt-color;
+    overflow: scroll;
+    font-size: 1.2rem;
+}
+
+hr {
+    border-style: none none none none;
+    height: 0;
+    background-color: $bg-color;
+    border-top: 0.15rem dotted $bt-color;
+}
+
+/* navbar */
+#nav-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#nav-item {
+    a {
+	color: $text-color;
+	padding: 0 1.5rem;
+	text-decoration: none;
+    }
+}
+
+/* footer */
+footer {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+}
+
+blockquote {
+    margin: 1rem;
+    padding: 1rem;
+    border-left: 1px solid #ccc;
+}
+
+/* image */
+img {
+    max-width: 100%;
+}
+
+/* description */
+.description {
+    color: #fff;
+}
+
+/* date */
+.date {
+    color: $text-color;
+    margin: 0.5rem 1rem 1.2rem 1rem;
+}
+
+/* responsive design */
+@media (min-width:780px) {
+    html {
+	max-width: 780px;
+	margin: 0 auto;
+    }
+    
+    body {
+	font-size: 1.3rem;
+	line-height: 1.8rem;
+    }
+
+    pre {
+	overflow: auto;
+	white-space: pre-wrap;
+    }
+}

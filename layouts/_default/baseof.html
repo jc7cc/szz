@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <div id="content">
-        {{- block "main" . }}{{- end }}
-        </div>
-        {{- partial "footer.html" . -}}
-    </body>
+    {{- partial "head.html" . }}
+  <body>
+    <div class="flex-container">
+      <div id="flex-item-1">
+	{{- partial "header.html" . -}}
+      </div>
+      <div id="flex-item-2">
+	{{- block "main" . -}}{{- end -}}
+      </div>
+      <flex id="flex-item-3">
+	{{- partial "footer.html" . -}}
+      </flex>
+    </div>
+  </body>
 </html>
