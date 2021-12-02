@@ -1,11 +1,13 @@
-$bg-color: #212221;
-$bt-color: #C8C6C6;
-/* $link-color: #FFAA71; */
-$link-color: #7FCD91;
-$select-color: #01B0D3;
+/* $bg-color: #212221; */
+$bg-color: #EBE9DD;
+$select-color: #283F8F;
+/* $link-color: #7FCD91; */
+$link-color:$select-color;
 $title-color: $link-color;
-$text-color: $bt-color;
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC&family=Roboto&display=swap');
+/* $text-color: #C8C6C6; */
+$border-color: #3E0C06;
+$text-color: #000;
+
 
 ::selection {
   color: $bg-color;
@@ -24,36 +26,21 @@ body {
   font-family: 'Roboto', 'Noto Sans SC', sans-serif;
   font-size: 1.2rem;
   line-height: 1.5rem;
-  background-color: $bg-color;
+  background-color: #eee;
   color: $text-color;
   min-height: 100vh;
 }
 
-/* flex-utilities */
-.flex-container {
+/* flexbox for main layout */
+.flex__container {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-item: stretch;
 }
 
-#flex-item-2 {
+.flex__main {
     flex-grow: 1;
-}
-
-/* book review utilities (flex) */
-.flex-book-container {
-    margin: 1.5rem 1rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    h2 {
-	margin: 0;
-    }
-}
-
-#book {
-    max-width: 120px;
 }
 
 /* heading and title */
@@ -87,7 +74,41 @@ h6 {
     font-size: 0.75rem;
 }
 
-#site-title {
+article {
+    h1, h2, h3, h4, h5, h6 {
+	color: $link-color;
+    }
+    h1::before {
+	content: "# "
+    }
+    h2::before {
+	content: "## "
+    }
+    h3::before {
+	content: "### "
+    }
+    h4::before {
+	content: "#### "
+    }
+    h5::before {
+	content: "##### "
+    }
+    h6::before {
+	content: "###### "
+    }    
+}
+
+.title::before {
+    content: ""
+}
+
+.title {
+    color: $title-color;
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+.site__title {
     font-size: 1.9rem;
     text-align: center;
     a {
@@ -95,15 +116,13 @@ h6 {
 	text-decoration: none;
     }
     a:hover {
-	text-decoration: underline $bt-color;
+	text-decoration: underline $text-color;
 	text-decoration-thickness: 0.2rem;
     }
 }
 
-.title {
-    color: $title-color;
-    text-align: center;
-    line-height: 2.5rem;
+.article__title {
+    border: none;
 }
 
 .index-title {
@@ -128,14 +147,14 @@ a {
 }
 
 p {
-  margin: 0 1rem;
+  margin: 0.7rem 1rem;
   text-align: justify;
 }
 
 pre {
     margin: 1rem 1.5rem;
     padding: 0.5rem;
-    border: 0.5px solid $bt-color;
+    border: 2px solid $border-color;
     overflow: scroll;
     font-size: 1.2rem;
 }
@@ -144,7 +163,7 @@ hr {
     border-style: none none none none;
     height: 0;
     background-color: $bg-color;
-    border-top: 0.15rem dotted $bt-color;
+    border-top: 0.15rem dotted $text-color;
 }
 
 /* navbar */
@@ -193,10 +212,10 @@ img {
     margin: 0.5rem 1rem 1.2rem 1rem;
 }
 
-/* responsive design */
+/* responsive features for tablet and pc */
 @media (min-width:780px) {
     html {
-	max-width: 780px;
+	max-width: 960px;
 	margin: 0 auto;
     }
     
