@@ -2,16 +2,16 @@
 <html>
     {{- partial "head.html" . }}
   <body>
-    <div class="flex-container">
-      <div id="flex-item-1">
+    <div class="flex__container">
+      <div id="flex-header">
 	{{- partial "header.html" . -}}
       </div>
-      <div id="flex-item-2">
+      <div class="flex__main">
 	{{- block "main" . -}}{{- end -}}
       </div>
-      <flex id="flex-item-3">
-	{{- partial "footer.html" . -}}
-      </flex>
+      <div class="flex__footer">
+	{{- partial "footer.html" . -}} 
+      </div>
     </div>
   </body>
 </html>

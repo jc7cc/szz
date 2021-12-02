@@ -1,6 +1,7 @@
 {{ define "main" }}
-<main>
-  <h1 class="title">{{ .Title }}</h1>
-  <div>{{ .Content }}</div>  
+<main class="single">
+  <h1 class="title article__title">{{ .Title }}</h1>
+  <article>{{ .Content }}</article>
+  <a href="{{with .Site.RegularPages.Next . }}{{.RelPermalink}}{{end}}">Next</a>
 </main>
 {{ end }}
