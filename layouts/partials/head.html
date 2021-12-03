@@ -18,7 +18,12 @@
   {{ $style := resources.Get "css/style.css" -}}
   <link href="{{ $reset.RelPermalink }}" rel="stylesheet"/>
   <link href="{{ $style.RelPermalink }}" rel="stylesheet"/>
+  {{ if (isset .Site.Params "favicon")}}
+  <link rel="icon" href="{{- .Site.Params.Favicon -}}">  
+  {{ else }}
   <link rel="icon" href="favicon.ico">
+  {{ end }}
+
 
 </head>
 
