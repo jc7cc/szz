@@ -26,6 +26,7 @@ a:hover {
 
 p {
   margin: 0.7rem 1rem;
+  padding: 0 1rem;
   text-align: justify;
 }
 
@@ -37,7 +38,7 @@ code {
 
 pre {
   margin: 1rem 1.5rem;
-  padding: 0.5rem;
+  padding: 0 1rem;
   border: 2px solid #3E0C06;
   overflow: scroll;
   font-size: 1.2rem;
@@ -79,6 +80,12 @@ ul {
   margin-left: 2rem;
 }
 
+ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+  margin-left: 2rem;
+}
+
 li {
   padding: 0.5rem;
 }
@@ -108,7 +115,7 @@ header {
 h1, h2, h3, h4, h5, h6 {
   color: #000;
   font-weight: bold;
-  margin: 1.8rem 0 1.3rem 1.3rem;
+  margin: 1rem 0 0.5rem 1.3rem;
 }
 
 h1 {
