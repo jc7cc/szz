@@ -17,6 +17,11 @@ body {
 /* link */
 a {
   color: #283F8F;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 p {
@@ -94,7 +99,7 @@ header {
 h1, h2, h3, h4, h5, h6 {
   color: #000;
   font-weight: bold;
-  margin: 1.3rem 1rem;
+  margin: 1.8rem 0 1.3rem 1.3rem;
 }
 
 h1 {

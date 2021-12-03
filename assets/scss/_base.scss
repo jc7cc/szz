@@ -20,6 +20,11 @@ body {
 /* link */
 a {
     color: c.$link-color;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 p {
