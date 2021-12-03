@@ -1,0 +1,77 @@
+@use 'colors' as c;
+
+/* heading and title */
+h1, h2, h3, h4, h5, h6 {
+    color: c.$title-color;
+    font-weight: bold;
+    margin: 1.3rem 1rem;
+}
+
+h1 {
+    font-size: 1.65rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.17rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: 0.83rem;
+}
+
+h6 {
+    font-size: 0.75rem;
+}
+
+article {
+    h1, h2, h3, h4, h5, h6 {
+	color: c.$title-color;
+	border-bottom: 1px solid c.$border-color;
+    }
+}
+
+.title::before {
+    content: ""
+}
+
+.title {
+    color: c.$title-color;
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+.site__title {
+    font-size: 1.9rem;
+    text-align: center;
+    margin: 0.7rem auto;
+    a {
+	color: c.$title-color;
+	text-decoration: none;
+    }
+    a:hover {
+	text-decoration: underline c.$title-color;
+	text-decoration-thickness: 0.2rem;
+    }
+}
+
+.article__title {
+    border: none;
+}
+
+.index-title {
+    color: c.$title-color;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.index-title::before {
+    content: "# ";
+}

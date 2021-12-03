@@ -11,7 +11,9 @@
   <!-- styles -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {{ $reset := resources.Get "css/reset.css" -}}
-  {{ $style := resources.Get "scss/style.scss" | toCSS -}}
+  <!-- style.css is compiled mannually using dart-sass instead of -->
+  <!-- using hugo's pipe -->
+  {{ $style := resources.Get "css/style.css" -}}
   <link href="{{ $reset.RelPermalink }}" rel="stylesheet"/>
   <link href="{{ $style.RelPermalink }}" rel="stylesheet"/>
 

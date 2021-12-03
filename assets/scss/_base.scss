@@ -1,0 +1,77 @@
+@use 'colors' as c;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+  font-family: 'Roboto', 'Noto Sans SC', sans-serif;
+  // font-size: 1.2rem;
+  line-height: 1.5rem;
+  background-color: #eee;
+  color: c.$text-color;
+  min-height: 100vh;
+}
+
+/* link */
+a {
+    color: c.$link-color;
+}
+
+p {
+  margin: 0.7rem 1rem;
+  text-align: justify;
+}
+
+pre {
+    margin: 1rem 1.5rem;
+    padding: 0.5rem;
+    border: 2px solid c.$border-color;
+    overflow: scroll;
+    font-size: 1.2rem;
+}
+
+hr {
+    border-style: none none none none;
+    height: 0;
+    background-color: c.$bg-color;
+    border-top: 0.15rem dotted c.$text-color;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+}
+
+blockquote {
+    margin: 1rem;
+    padding: 1rem;
+    border-left: 1px solid #ccc;
+}
+
+/* image */
+img {
+    max-width: 100%;
+}
+
+/* list */
+ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-left: 2rem;
+}
+
+li {
+    padding: 0.5rem;
+}
+
+header {
+    text-align: center;
+}

@@ -3,11 +3,10 @@
     <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
   </h1>
   <nav>
-    <ul id="nav-container">
+    <ul class="nav__container">
 	{{ range .Site.Menus.main }}
-      <li id="nav-item">
+      <li class="nav__item">
 	<a href="{{ .URL }}"> {{ .Name }}</a>
-	<div class="bot-border"></div>
       </li>
       {{ end }}
     </ul>

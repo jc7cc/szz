@@ -1,0 +1,17 @@
+/* responsive features for tablet and pc */
+@media (min-width:780px) {
+    html {
+	max-width: 960px;
+	margin: 0 auto;
+    }
+    
+    body {
+	font-size: 1.3rem;
+	line-height: 1.8rem;
+    }
+
+    pre {
+	overflow: auto;
+	white-space: pre-wrap;
+    }
+}
