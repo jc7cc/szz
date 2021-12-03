@@ -54,10 +54,8 @@ article {
     margin: 0.7rem auto;
     a {
 	color: c.$title-color;
-	text-decoration: none;
     }
     a:hover {
-	text-decoration: underline c.$title-color;
 	text-decoration-thickness: 0.2rem;
     }
 }
