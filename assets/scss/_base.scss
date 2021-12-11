@@ -29,7 +29,6 @@ a:hover {
 
 p {
   margin: 0.7rem 1rem;
-  padding: 0 1rem;
   text-align: justify;
 }
 
@@ -63,17 +62,17 @@ img {
 ul {
     list-style-type: disc;
     list-style-position: inside;
-    margin-left: 2rem;
+    margin: 0.1rem 1rem;
 }
 
 ol {
     list-style-type: decimal;
     list-style-position: inside;
-    margin-left: 2rem;
+    margin: 1rem;
 }
 
 li {
-    padding: 0.5rem;
+    padding: 0.6rem;
 }
 
 header {

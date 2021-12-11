@@ -1,13 +1,14 @@
 @use 'colors' as colors;
 
 .highlight {
-    margin: 1rem auto;
-    max-width: 85%;
+    margin: 0 auto;
+    max-width: 95%;
     border: 2px solid colors.$border;
     box-shadow: 5px 5px 5px colors.$shadow;
-    font-size: 1.1rem;
-    font-family: 'cosolas', monospace;
+    font-family: monospace;
     code {
 	white-space: pre-line;
+	display: inline-block;
+	padding-left: 0.5rem;
     }
 }
