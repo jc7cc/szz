@@ -1,4 +1,4 @@
-@use 'colors' as c;
+@use 'colors' as colors;
 
 * {
   box-sizing: border-box;
@@ -12,14 +12,14 @@ body {
   font-family: 'Roboto', 'Noto Sans SC', sans-serif;
   // font-size: 1.2rem;
   line-height: 1.5rem;
-  background-color: #eee;
-  color: c.$text-color;
+  background: #fff;
+  color: colors.$text;
   min-height: 100vh;
 }
 
 /* link */
 a {
-    color: c.$link-color;
+    color: colors.$link;
     text-decoration: none;
 }
 
@@ -33,22 +33,11 @@ p {
   text-align: justify;
 }
 
-pre {
-    margin: 1rem 1.5rem;
-    padding: 0 1rem;
-    border: 1px solid c.$border-color;
-    overflow: scroll;
-    font-size: 1.2rem;
-    code {
-	background-color: transparent;
-    }
-}
-
 hr {
     border-style: none none none none;
     height: 0;
-    background-color: c.$bg-color;
-    border-top: 0.15rem dotted c.$text-color;
+    background: colors.$bg;
+    border-top: 0.15rem dotted colors.$text;
 }
 
 /* footer */

@@ -1,10 +1,10 @@
-@use 'colors' as c;
+@use 'colors' as colors;
 
 /* heading and title */
 h1, h2, h3, h4, h5, h6 {
-    color: c.$title-color;
+    color: colors.$title;
     font-weight: bold;
-    margin: 1rem 0 0.5rem 1.3rem;
+    padding: 0.3rem 1rem;
 }
 
 h1 {
@@ -33,7 +33,8 @@ h6 {
 
 article {
     h1 {
-	border-bottom: 1px solid c.$border-color;
+	margin-top: 2rem;
+	border-bottom: 2px solid colors.$border;
     }
 }
 
@@ -50,7 +51,7 @@ article {
     font-size: 1.9rem;
     margin: 0.7rem auto;
     a {
-	color: c.$title-color;
+	color: colors.$title;
     }
     a:hover {
 	text-decoration-thickness: 0.2rem;

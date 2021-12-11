@@ -1,8 +1,8 @@
-@use 'colors' as c;
+@use 'colors' as colors;
 
 ::selection {
-  color: c.$bg-color;
-  background: c.$select-color;
+  color: colors.$bg;
+  background: colors.$select;
 }
 
 /* flexbox for main layout */
@@ -28,7 +28,7 @@
 
 .nav__item {
     a {
-	color: c.$text-color;
+	color: colors.$text;
 	padding: 0 1.5rem;
     }
 
