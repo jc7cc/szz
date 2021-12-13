@@ -1,5 +1,12 @@
 @use 'colors' as colors;
 
+code {
+    background-color: colors.$code;
+    border-radius: 0.2rem;
+    box-shadow: 1px 1px 2px colors.$shadow;
+    padding: 0.15rem;
+}
+
 .highlight {
     margin: 0 auto;
     max-width: 95%;
@@ -7,7 +14,9 @@
     box-shadow: 5px 5px 5px colors.$shadow;
     font-family: monospace;
     code {
+	box-shadow: none;
 	white-space: pre-line;
+	background-color: transparent;
 	display: inline-block;
 	padding-left: 0.5rem;
     }
