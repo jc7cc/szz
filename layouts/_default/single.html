@@ -1,6 +1,7 @@
 {{ define "main" }}
 <main class="single">
   <h1 class="title">{{ .Title }}</h1>
+  <p>By {{ .Param "author" }}. Published on: {{ .Date.Format "January 2, 2006" }}</p>
   <article>{{ .Content }}</article>
 </main>
 {{ end }}
