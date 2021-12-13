@@ -4,16 +4,12 @@
   box-sizing: border-box;
 }
 
-html {
-    height: 100vh;
-}
-
 body {
   font-family: 'Roboto', 'Noto Sans SC', sans-serif;
   line-height: 1.5rem;
   background: colors.$bg;
   color: colors.$text;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 a {
