@@ -13,6 +13,7 @@ code {
     border: 2px solid colors.$border;
     box-shadow: 5px 5px 5px colors.$shadow;
     font-family: monospace;
+    margin-bottom: 0.8rem;
     code {
 	box-shadow: none;
 	white-space: pre-line;

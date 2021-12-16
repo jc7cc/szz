@@ -22,7 +22,8 @@ a:hover {
 }
 
 p {
-  margin: 0.7rem 1rem;
+  max-width: 95%;
+  margin: 0.7rem auto;
   margin-top: 0;
   text-align: justify;
 }
