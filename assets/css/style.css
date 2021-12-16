@@ -21,6 +21,7 @@ a:hover {
 
 p {
   margin: 0.7rem 1rem;
+  margin-top: 0;
   text-align: justify;
 }
 
@@ -82,6 +83,15 @@ header {
 
   .highlight {
     font-size: 1rem;
+  }
+
+  .article__info {
+    display: flex;
+    margin-top: 2rem;
+  }
+  .article__info p {
+    margin-right: 0;
+    margin-bottom: 0;
   }
 }
 /* heading and title */
@@ -177,11 +187,15 @@ article h1 {
   padding: 0 1.5rem;
 }
 
+.article__info {
+  margin-top: 2rem;
+}
+
 code {
   background-color: #ccc;
   border-radius: 0.2rem;
   box-shadow: 1px 1px 2px rgba(68, 68, 68, 0.6);
-  padding: 0.15rem;
+  padding: 0.05rem;
 }
 
 .highlight {

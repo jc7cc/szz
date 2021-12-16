@@ -1,7 +1,16 @@
 {{ define "main" }}
+{{- $date := .Date.Format "01/02, 2006" -}}
+{{- $lastmod := .Lastmod.Format "01/02, 2006" -}}
+
 <main class="single">
+
   <h1 class="title">{{ .Title }}</h1>
-  <p>By {{ .Param "author" }}. Published on: {{ .Date.Format "January 2, 2006" }}</p>
+
+
   <article>{{ .Content }}</article>
+  <div class="article__info">
+    <p class="author">By {{ .Param "author" }}.</p>
+    <p class="date"> Date: {{ $date }}. Last Updated: {{ $lastmod }}.</p>    
+  </div>
 </main>
 {{ end }}
