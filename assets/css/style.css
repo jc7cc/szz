@@ -210,7 +210,7 @@ code {
 }
 .highlight code {
   box-shadow: none;
-  white-space: pre-line;
+  white-space: pre-wrap;
   background-color: transparent;
   display: inline-block;
   padding-left: 0.5rem;
